@@ -45,12 +45,22 @@
 - Documentação AWS ainda mostra `process.client` nalguns exemplos Vue.
 - Em Nuxt 3.14+ e Nuxt 4, preferir **`import.meta.client`** / **`import.meta.server`** quando o projeto já adotar esse padrão, mantendo a mesma lógica Amplify.
 
-## Segurança (checklist curto)
+## Performance
+
+- **Bundle**: importar apenas `aws-amplify/*` necessários por ficheiro; evitar barris personalizados que reexportem todo o SDK para a árvore do cliente.
+- **Hidratação**: dados obtidos no SSR devem hidratar o estado inicial sem segundo round-trip idêntico no cliente (padrões Nuxt de `useAsyncData` com payload partilhado); evitar `refreshNuxtData` em cascata em cada `onMounted` sem debounce.
+- **AppSync**: listagens com paginação (`nextToken`) em vez de pedir coleções completas; filtrar no servidor com índices/schema em vez de filtrar grandes listas só no browser.
+- **Auth**: `fetchAuthSession` tem custo — cachear o resultado **dentro do mesmo pedido** de render (por exemplo composable por request) quando vários componentes precisam da mesma sessão, sem partilhar entre pedidos.
+
+## Segurança (checklist)
 
 - Nunca commitar `amplify_outputs.json` com dados sensíveis se a política do repositório proibir; em muitos projetos o ficheiro é gerado no CI — seguir convenção do repositório alvo.
 - Não colocar segredos de OAuth ou chaves em variáveis de ambiente de build em texto claro; usar [Secrets](https://docs.amplify.aws/react/deploy-and-host/fullstack-branching/secrets-and-vars/) no backend Amplify e `secret()` na definição de recursos.
 - Em hosting no domínio `amplifyapp.com`, avaliar prefixo `__Host-` em cookies sensíveis (ver user guide AWS link acima).
 - Garantir que operações `list`/`get`/`mutation` usam o **`authMode`** correto para cada regra (`userPool`, `identityPool`, `apiKey`, etc.).
+- **CSRF**: para mutações sensíveis via cookies de sessão no mesmo domínio, alinhar com a política do projeto (SameSite, tokens anti-CSRF em formulários, ou BFF que só aceita pedidos same-origin).
+- **XSS**: tratar conteúdo vindo de Data como não confiável até sanitizado; o Cognito não substitui escaping em templates Vue.
+- **Redirects**: após login/logout, usar URLs relativas ou allowlist de destinos para evitar open redirect.
 
 ## Disclaimer da AWS
 

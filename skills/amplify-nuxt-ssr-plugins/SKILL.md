@@ -5,7 +5,8 @@ description: >-
   Amplify.configure(amplify_outputs), generateClient tipado, runWithAmplifyServerContext,
   cookies Cognito via useCookie e provide em useNuxtApp. Usar ao criar ou corrigir
   integração Amplify em Nuxt 3/4, erros "Library not configured", Data/Auth em
-  useAsyncData, ou antes de tocar em server/api sem utilitário Nitro.
+  useAsyncData, performance de cliente/SSR, superfície de auth/cookies, ou antes
+  de tocar em server/api sem utilitário Nitro.
 disable-model-invocation: true
 ---
 
@@ -21,7 +22,19 @@ disable-model-invocation: true
 
 - `amplify_outputs.json` na raiz do app Nuxt (ou caminho acordado no projeto), gerado pelo backend Gen 2.
 - Dependência `aws-amplify` compatível com o backend; para Data Gen 2 seguir o guia que usa `aws-amplify/data` e `aws-amplify/data/server` (ver referência).
-- Tipos `Schema` de `#/amplify/data/resource` ou caminho que o projeto use.
+- Tipos `Schema` conforme o alias do projeto (ex.: `@/amplify/data/resource` ou `#/amplify/data/resource` se o `tsconfig` mapear esse prefixo).
+
+## Performance (resumo)
+
+- **Cliente**: configurar uma vez e expor um **único** cliente Data (ou objeto estável) via `provide`; evitar `generateClient` novo em cada mount ou em computed que corre no cliente.
+- **SSR**: em `useAsyncData` / `useFetch`, usar **keys estáveis** e evitar refetch redundante; pedir ao AppSync apenas o subconjunto de campos necessários à página.
+- **Servidor do plugin**: quando várias operações partilham o mesmo pedido de página, preferir **um** `runWithAmplifyServerContext` com várias chamadas no callback em vez de aninhar vários contextos sem necessidade.
+
+## Segurança (resumo)
+
+- Não expor em `$Amplify` atalhos que permitam `authMode: 'apiKey'` em rotas que devem ser estritamente por utilizador, salvo decisão explícita do produto.
+- Manter `secure` / `sameSite` / `maxAge` ou `expires` dos cookies alinhados ao domínio e ao risco de CSRF na arquitetura escolhida (BFF same-origin vs domínios cruzados).
+- Nunca logar valores de cookies Cognito nem tokens em handlers `.server.ts` ou middleware de rota.
 
 ## Fluxo obrigatório
 
@@ -49,6 +62,8 @@ disable-model-invocation: true
 - [ ] Todas as chamadas server-side dentro de `runWithAmplifyServerContext`.
 - [ ] Cookies: `secure: true` em produção; `sameSite` alinhado ao fluxo de auth (lax/strict conforme risco).
 - [ ] `authMode` das operações Data alinhado às regras do schema AppSync.
+- [ ] Performance: cliente Data único (ou estável) via plugin; queries SSR enxutas; keys de `useAsyncData` previsíveis.
+- [ ] Segurança: sem tokens ou cookies em logs; sem `apiKey` em caminhos que exijam identidade de utilizador.
 
 ## Referência
 

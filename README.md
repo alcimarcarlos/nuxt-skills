@@ -103,7 +103,7 @@ done
 1. Confirmar **Gen 2** (`amplify_outputs.json`, pasta `amplify/` no backend).
 2. Ficheiros em `plugins/` ou páginas universais → `amplify-nuxt-ssr-plugins`.
 3. Ficheiros em `server/` → `amplify-nuxt-nitro-server`.
-4. Seguir `AGENTS.md` para ordem de decisão e barra mínima de qualidade.
+4. Seguir `AGENTS.md` para ordem de decisão, barra mínima de qualidade, e secções **Performance** e **Segurança (além da barra mínima)**.
 
 ### Cursor e pasta `.cursor/skills`
 

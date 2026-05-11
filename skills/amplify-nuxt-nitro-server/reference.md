@@ -23,14 +23,27 @@ O handler Nitro recebe `H3Event`. O adapter de cookies:
 
 ## Data Gen 2 no Nitro
 
-- Cliente tipado: `aws-amplify/data` + `generateClient<Schema>()`.
-- Servidor: `aws-amplify/data/server` + `generateClient({ config: amplifyConfig })`; cada chamada a `models.*` ou `graphql` deve receber **`contextSpec`** como primeiro argumento, dentro de `runWithAmplifyServerContext`.
+- No **browser**, o cliente tipado usa `aws-amplify/data` + `generateClient<Schema>()` (configuração via `Amplify.configure`).
+- Em **`server/`**, usar **apenas** `aws-amplify/data/server` dentro de `runAmplifyApi` / `runWithAmplifyServerContext`: `generateClient({ config: amplifyConfig })`; cada chamada a `models.*` ou `graphql` deve receber **`contextSpec`** como primeiro argumento.
 - Alinhar **`authMode`** com as regras do schema (user pool, identity pool, API key, etc.).
 
 ## Auth no Nitro
 
 - `getCurrentUser`, `fetchAuthSession`, `fetchUserAttributes` de `aws-amplify/auth/server` apenas dentro do contexto isolado.
 - Para apenas validar presença de sessão em middleware, `fetchAuthSession` costuma ser suficiente; mapear `session.tokens === undefined` para 401/403 conforme política do projeto.
+
+## Performance
+
+- **Cold paths**: evitar importar categorias Amplify não usadas no handler para reduzir tempo de arranque do worker Nitro.
+- **Paralelismo controlado**: `Promise.all` para chamadas AppSync independentes no mesmo handler com limite consciente de concorrência; em coleções grandes, preferir sequência paginada a explosão de pedidos.
+- **Timeouts**: definir timeouts ou abort signals alinhados ao SLA do produto para não acumular pedidos pendurados atrás de AppSync lento.
+
+## Segurança
+
+- **Autorização em duas camadas**: sessão Cognito válida **e** regras do schema; handlers podem ainda filtrar por `sub`/tenant antes de devolver dados agregados.
+- **CORS**: se `server/api` for consumido por outro origin, listar origins explicitamente; `credentials: 'include'` só com política de cookies e CSRF estudada.
+- **Storage**: URLs assinadas com TTL curto; validar `Content-Type` e tamanho no upload antes de chegar ao bucket; nunca confiar só na extensão do ficheiro.
+- **Functions**: não expor nomes internos de Lambda nem payloads de erro crus ao cliente; mapear para códigos estáveis da API.
 
 ## Armadilhas
 

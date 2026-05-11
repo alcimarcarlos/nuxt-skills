@@ -4,8 +4,8 @@ description: >-
   Integra AWS Amplify Gen 2 em rotas e middleware Nitro (server/api, server/middleware)
   com contexto isolado por pedido: runWithAmplifyServerContext, cookies via H3Event,
   utilitário runAmplifyApi. Usar ao implementar server/api que chamam Auth/Data,
-  proteger endpoints com sessão Cognito, ou quando plugins Nuxt não aplicam ao
-  diretório server/.
+  proteger endpoints com sessão Cognito, endurecer BFF (validação, CORS, erros),
+  otimizar middleware e queries, ou quando plugins Nuxt não aplicam ao diretório server/.
 disable-model-invocation: true
 ---
 
@@ -36,12 +36,26 @@ Os **plugins Nuxt** (`.server.ts` na raiz da app) **não** correm no runtime Nit
 
 5. **Data Gen 2**: usar `generateClient` de `aws-amplify/data/server` dentro de `runAmplifyApi` quando o guia do projeto seguir o stack Data (ver [reference.md](reference.md)).
 
+## Performance (resumo)
+
+- **Por pedido**: manter construção de adapter e `libraryOptions` a partir de `event`; cachear só valores **imutáveis** do projeto (config parseada de `amplify_outputs`), nunca estado de sessão.
+- **AppSync**: pedidos com seleção mínima de campos; usar paginação em listas; evitar N+1 de várias rotas internas quando um único handler pode compor a resposta.
+- **Middleware global**: se só uma fração das rotas precisa de sessão, restringir o middleware a prefixos (`/api/protected/*`) para não correr `fetchAuthSession` em cada asset ou health check.
+
+## Segurança (resumo)
+
+- Validar **corpo, query e cabeçalhos** antes de encaminhar para AppSync ou Storage; tratar o handler como BFF, não como proxy transparente.
+- Respostas **401/403** sem expor motivos internos (grupos, claims, nomes de recursos AWS) em produção.
+- Rotas públicas (`server/api` sem auth): revisão explícita de rate limit, tamanho de payload e tipos MIME aceites.
+
 ## Verificação rápida
 
 - [ ] Nenhum import direto de `aws-amplify/auth` (sem `/server`) em ficheiros sob `server/`.
 - [ ] Nenhuma suposição de `useNuxtApp()` ou `useCookie()` de plugins — usar apenas APIs Nitro/h3 no handler.
 - [ ] Operações Amplify sempre dentro de `runAmplifyApi` (ou equivalente) por pedido.
 - [ ] Respostas de erro não expõem detalhes internos de Cognito/AppSync em produção.
+- [ ] Performance: middleware/session só onde necessário; queries Data paginadas ou limitadas.
+- [ ] Segurança: inputs validados; sem tokens em logs; endpoints sensíveis não são proxy aberto.
 
 ## Referência
 

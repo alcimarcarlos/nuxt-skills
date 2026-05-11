@@ -32,7 +32,25 @@ Este ficheiro complementa as skills **Nuxt** deste repositório quando o trabalh
    → Alinhar cliente e servidor com o schema (deny-by-default); ver [Customize your auth rules](https://docs.amplify.aws/react/build-a-backend/data/customize-authz/).
 
 5. Envolve **segredos ou variáveis de build**?  
-   → Segredos via console/sandbox e `secret()` no backend; não colocar valores sensíveis em environment variables de build (ver [Secrets and environment vars](https://docs.amplify.aws/react/deploy-and-host/fullstack-branching/secrets-and-vars)).
+   → Segredos via console/sandbox e `secret()` no backend; não colocar valores sensíveis em environment variables de build (ver [Secrets and environment vars](https://docs.amplify.aws/react/deploy-and-host/fullstack-branching/secrets-and-vars/)).
+
+6. Envolve **Storage, Functions ou uploads** com credenciais de utilizador?  
+   → Aplicar a mesma regra de **runtime** que Auth/Data: plugins SSR para código universal; Nitro (`server/`) com `runAmplifyApi` e imports `…/server`. Não introduzir chaves estáticas ou tokens longos no bundle do cliente além do que o SDK já expõe por desenho.
+
+## Performance (Amplify + Nuxt)
+
+- **Configuração e cliente**: um único `Amplify.configure` no arranque do cliente; uma instância (ou fábrica estável) de `generateClient` exposta via `provide`, evitando recriar o cliente em cada componente ou navegação.
+- **SSR e Data**: em `useAsyncData` / `useFetch`, chaves estáveis, deduplicação quando fizer sentido, e queries **mínimas** (menos campos e menos round-trips) para reduzir TTFB e custo AppSync.
+- **Servidor (render)**: agrupar operações que partilham o mesmo `runWithAmplifyServerContext` quando for seguro, em vez de abrir vários contextos na mesma renderização sem necessidade.
+- **Nitro**: isolamento por pedido continua obrigatório; pode cachear em memória **apenas** artefactos imutáveis (por exemplo `amplifyConfig` já parseada), nunca `libraryOptions` nem estado derivado de cookies entre pedidos.
+- **Bundle cliente**: importar `aws-amplify/auth`, `data`, `storage`, etc. só nos módulos que precisam, para melhor tree-shaking.
+
+## Segurança (além da barra mínima)
+
+- **BFF Nitro**: tratar `server/api` como limite de confiança — validar método, inputs e, se aplicável, origem (mesmo site ou CORS explícito); o schema AppSync **não** substitui validação de entrada na API.
+- **Logs e erros**: em produção, não registar cookies, tokens, `sub` de terceiros em claro, nem stack traces completos de Cognito para o cliente; respostas genéricas com correlação interna (request id).
+- **Auth modes**: `apiKey` só quando o modelo de ameaça for explicitamente público ou leitura limitada; fluxos autenticados devem preferir `userPool` / `identityPool` alinhados às regras do schema (deny-by-default).
+- **Cabeçalhos e superfície**: reutilizar políticas do projeto (CSP, `Referrer-Policy`, etc.) nas skills Nuxt de segurança; em rotas sensíveis Nitro, considerar limitação de taxa e negação por defeito (401 sem sessão válida).
 
 ## Compatibilidade (Cursor, Codex, Copilot)
 
@@ -47,3 +65,4 @@ Este ficheiro complementa as skills **Nuxt** deste repositório quando o trabalh
 - No Nitro: utilitário baseado em `H3Event` que cria storage a partir dos cookies do pedido; nunca reutilizar estado global de pedido a pedido.
 - Tipagem com `Schema` gerado a partir de `amplify/data/resource` quando o projeto usar Amplify Data Gen 2.
 - Documentar limitações conhecidas da doc AWS (ex.: exemplos com `process.client` vs `import.meta.client` em Nuxt 4).
+- Performance e segurança detalhadas por camada: skills **`amplify-nuxt-ssr-plugins`** e **`amplify-nuxt-nitro-server`** (e `reference.md` de cada uma).
