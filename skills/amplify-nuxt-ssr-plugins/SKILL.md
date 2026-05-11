@@ -12,10 +12,16 @@ disable-model-invocation: true
 
 # Amplify Gen 2 + Nuxt — plugins SSR
 
+## Complementar com outras skills
+
+- **Backend Gen 2** (`amplify/`, `npx ampx`, schema, `defineAuth` / `defineData`): skill **[amplify-workflow](https://github.com/awslabs/agent-plugins/tree/main/plugins/aws-amplify/skills/amplify-workflow)** (awslabs/agent-plugins). Esta skill assume `amplify_outputs.json` e foca plugins `.client.ts` / `.server.ts` e contexto SSR Nuxt.
+- **UI pré-construída** (Authenticator, etc.): [Amplify UI — Vue](https://ui.docs.amplify.aws/vue/getting-started/introduction).
+
 ## Quando usar
 
 - Criar ou alterar ficheiros em `plugins/` para Amplify com **renderização universal** (mesmo código no servidor e no cliente).
 - Corrigir `NoCredentials`, library não configurada, ou chamadas Amplify no servidor sem contexto isolado.
+- Dados que têm de existir na **primeira pintura HTML** não podem depender só de `onMounted` (só cliente); obter no servidor via plugin + `useAsyncData` / `useFetch` com contexto Amplify.
 - Preparar `useNuxtApp().$Amplify` como API única para páginas e composables.
 
 ## Pré-requisitos no projeto

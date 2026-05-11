@@ -4,6 +4,8 @@
 
 | Tópico | URL |
 |--------|-----|
+| Índice Amplify para LLMs (`llms.txt`) | https://docs.amplify.aws/ai/llms.txt |
+| Skill oficial Amplify Gen 2 (backend, `ampx`, multi-framework) | https://github.com/awslabs/agent-plugins/tree/main/plugins/aws-amplify/skills/amplify-workflow |
 | Data a partir do runtime servidor Nuxt (Gen 2) | https://docs.amplify.aws/javascript/build-a-backend/data/connect-from-server-runtime/nuxtjs-server-runtime/ |
 | Categorias Amplify no Nuxt 3 (Vue — exemplos amplos) | https://docs.amplify.aws/vue/frontend/server-side-rendering/nuxt/ |
 | SSR genérico (contexto) | https://docs.amplify.aws/javascript/frontend/server-side-rendering/ |
@@ -11,6 +13,8 @@
 | Segredos e variáveis (Gen 2) | https://docs.amplify.aws/react/deploy-and-host/fullstack-branching/secrets-and-vars/ |
 | Boas práticas de segurança Amplify Hosting | https://docs.aws.amazon.com/amplify/latest/userguide/security-best-practices.html |
 | Library not configured | https://docs.amplify.aws/javascript/build-a-backend/troubleshooting/library-not-configured/ |
+| Nuxt — documentação geral | https://nuxt.com/docs/getting-started/introduction |
+| Amplify UI (Vue) | https://ui.docs.amplify.aws/vue/getting-started/introduction |
 
 ## Gen 2 Data vs guias Vue com `aws-amplify/api`
 
@@ -61,6 +65,12 @@
 - **CSRF**: para mutações sensíveis via cookies de sessão no mesmo domínio, alinhar com a política do projeto (SameSite, tokens anti-CSRF em formulários, ou BFF que só aceita pedidos same-origin).
 - **XSS**: tratar conteúdo vindo de Data como não confiável até sanitizado; o Cognito não substitui escaping em templates Vue.
 - **Redirects**: após login/logout, usar URLs relativas ou allowlist de destinos para evitar open redirect.
+
+## Limitações conhecidas (doc e runtime)
+
+- **`onMounted`**: só corre no cliente; sessão ou listagens Amplify necessárias no HTML inicial têm de ser obtidas no **servidor de render** (plugin `.server.ts` + `runWithAmplifyServerContext`) ou via `useAsyncData` / `useFetch` que chamem código já contextualizado — ver discussões em [aws-amplify/docs](https://github.com/aws-amplify/docs) sobre guias Nuxt/SSR.
+- **Versão do SDK**: comparar exemplos da AWS com a versão de `aws-amplify` no `package.json`; APIs e paths (`aws-amplify/data` vs `aws-amplify/api`) evoluem entre releases.
+- **Duas fontes de verdade**: alterações em `amplify/data/resource.ts` exigem `npx ampx sandbox` (ou pipeline) para regenerar `amplify_outputs.json` antes de alinhar tipos `Schema` no Nuxt.
 
 ## Disclaimer da AWS
 

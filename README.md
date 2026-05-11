@@ -117,3 +117,14 @@ ln -sfn "../../skills/amplify-nuxt-nitro-server" .cursor/skills/amplify-nuxt-nit
 
 (Execute na raiz do **repositório da aplicação** Nuxt, não necessariamente neste repositório de skills.)
 
+### Ecossistema e skills complementares
+
+Este pacote foca **Nuxt** (3/4/5) e **integração Amplify no runtime** (plugins SSR + Nitro). Para outras necessidades:
+
+| Interesse | Recurso |
+| --------- | ------- |
+| Backend Gen 2 (`amplify/`, `defineAuth` / `defineData`, `npx ampx sandbox`, pipeline) | Skill oficial **[amplify-workflow](https://github.com/awslabs/agent-plugins/tree/main/plugins/aws-amplify/skills/amplify-workflow)** no repositório [awslabs/agent-plugins](https://github.com/awslabs/agent-plugins) (também no [Cursor Marketplace — AWS Amplify](https://cursor.com/marketplace/aws/aws-amplify)). Complementa estes ficheiros com padrões versionados por framework. |
+| Índice da doc Amplify orientado a LLM | [docs.amplify.aws/ai/llms.txt](https://docs.amplify.aws/ai/llms.txt) |
+| Outro catálogo comunitário só Nuxt (Vue, NuxtHub, etc.) | Ex.: [onmax/nuxt-skills](https://github.com/onmax/nuxt-skills) — avaliar sobreposição com este pacote antes de misturar regras conflituosas. |
+
+Ordem sugerida: **amplify-workflow** (ou doc `ampx`) para alterar o backend → **amplify-nuxt-ssr-plugins** / **amplify-nuxt-nitro-server** para ligar o app Nuxt a `amplify_outputs` e contexto servidor.

@@ -4,11 +4,15 @@
 
 | Tópico | URL |
 |--------|-----|
+| Índice Amplify para LLMs (`llms.txt`) | https://docs.amplify.aws/ai/llms.txt |
+| Skill oficial Amplify Gen 2 (backend, `ampx`) | https://github.com/awslabs/agent-plugins/tree/main/plugins/aws-amplify/skills/amplify-workflow |
 | Nuxt.js server runtime (Gen 2 Data, plugins + Nitro) | https://docs.amplify.aws/javascript/build-a-backend/data/connect-from-server-runtime/nuxtjs-server-runtime/ |
 | Vue / Nuxt — utilitário `amplifyUtils` e `server/api/current-user` | https://docs.amplify.aws/vue/frontend/server-side-rendering/nuxt/ |
 | `runWithAmplifyServerContext` (conceito) | https://docs.amplify.aws/javascript/frontend/server-side-rendering/ |
 | Regras de autorização Data | https://docs.amplify.aws/react/build-a-backend/data/customize-authz/ |
 | Troubleshooting library not configured | https://docs.amplify.aws/javascript/build-a-backend/troubleshooting/library-not-configured/ |
+| Nitro — rotas e handlers | https://nitro.unjs.io/guide/routing |
+| h3 — objeto `event` (pedido, headers, utilitários) | https://h3.unjs.io/guide/event |
 
 ## Esqueleto do utilitário (conceito)
 

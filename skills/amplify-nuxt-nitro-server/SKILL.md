@@ -11,6 +11,10 @@ disable-model-invocation: true
 
 # Amplify Gen 2 + Nuxt — Nitro (`server/`)
 
+## Complementar com outras skills
+
+- **Backend Gen 2** (`amplify/`, Lambdas, regras Data): **[amplify-workflow](https://github.com/awslabs/agent-plugins/tree/main/plugins/aws-amplify/skills/amplify-workflow)** (awslabs/agent-plugins). Esta skill cobre apenas **Nitro** (`server/`) com cookies e `runWithAmplifyServerContext`.
+
 ## Quando usar
 
 - Ficheiros em `server/api/**`, `server/routes/**`, `server/middleware/**`, ou utilitários em `server/utils/**` que precisem de **Auth** ou **Data** Amplify.

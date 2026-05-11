@@ -52,6 +52,11 @@ Este ficheiro complementa as skills **Nuxt** deste repositório quando o trabalh
 - **Auth modes**: `apiKey` só quando o modelo de ameaça for explicitamente público ou leitura limitada; fluxos autenticados devem preferir `userPool` / `identityPool` alinhados às regras do schema (deny-by-default).
 - **Cabeçalhos e superfície**: reutilizar políticas do projeto (CSP, `Referrer-Policy`, etc.) nas skills Nuxt de segurança; em rotas sensíveis Nitro, considerar limitação de taxa e negação por defeito (401 sem sessão válida).
 
+## Skills complementares (Amplify Gen 2 fora do Nuxt)
+
+- Para **definir ou alterar o backend** (`amplify/backend.ts`, `defineAuth`, `defineData`, `defineStorage`, `defineFunction`, `npx ampx sandbox`, `pipeline-deploy`, regras de autorização no schema): usar a skill oficial **[amplify-workflow](https://github.com/awslabs/agent-plugins/tree/main/plugins/aws-amplify/skills/amplify-workflow)** ([awslabs/agent-plugins](https://github.com/awslabs/agent-plugins), disponível no marketplace Cursor como **AWS Amplify**). Contém fluxos de scaffolding, segurança (`secret()`), e integração multi-framework.
+- Este repositório cobre **só** o encaixe **Nuxt** (plugins SSR + Nitro com cookies e `runWithAmplifyServerContext`); não substitui o `amplify-workflow` para código em `amplify/`.
+
 ## Compatibilidade (Cursor, Codex, Copilot)
 
 - **Cursor**: skills em `skills/<nome>/`; invocar pelo nome da skill ou pelo contexto do ficheiro. Para convenção `.cursor/skills/`, pode fazer symlink a partir de `skills/<nome>/`.
