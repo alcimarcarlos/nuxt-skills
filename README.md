@@ -1,9 +1,10 @@
-## Nuxt Skills (Cursor / Codex / Claude Code)
+## Nuxt + Amplify Skills (Cursor / Codex / Claude Code)
 
-Pacote de skills para **Nuxt 3, Nuxt 4 e Nuxt 5** focado em **boas práticas, produtividade, conformidade e segurança**.
+Pacote de skills para **Nuxt 3, Nuxt 4 e Nuxt 5** focado em **boas práticas, produtividade, conformidade e segurança**, mais skills para **AWS Amplify Gen 2** com Nuxt (SSR universal e Nitro).
 
 ### Estrutura
 
+- `AGENTS.md`: governança e ordem de decisão para **Amplify Gen 2 + Nuxt** (quando aplicável).
 - `skills/<skill-name>/SKILL.md`: entrada principal da skill (formato compatível com `~/.codex/skills`)
 - `skills/<skill-name>/reference.md`: detalhes, snippets e checklists estendidos (quando aplicável)
 
@@ -93,4 +94,26 @@ done
   - `nuxt-secret-scanning`
   - `nuxt-secure-logging`
   - `nuxt-version-compat-guard`
+- AWS Amplify Gen 2 + Nuxt
+  - `amplify-nuxt-ssr-plugins` — plugins `01.*.client.ts` / `01.*.server.ts`, `Amplify.configure`, `runWithAmplifyServerContext`, `useNuxtApp().$Amplify`
+  - `amplify-nuxt-nitro-server` — `server/api`, `server/middleware`, utilitário `runAmplifyApi(event, …)`, cookies via `H3Event`
+
+### Fluxo rápido (Amplify neste pacote)
+
+1. Confirmar **Gen 2** (`amplify_outputs.json`, pasta `amplify/` no backend).
+2. Ficheiros em `plugins/` ou páginas universais → `amplify-nuxt-ssr-plugins`.
+3. Ficheiros em `server/` → `amplify-nuxt-nitro-server`.
+4. Seguir `AGENTS.md` para ordem de decisão e barra mínima de qualidade.
+
+### Cursor e pasta `.cursor/skills`
+
+O pacote original Amplify usava `.cursor/skills/`. Aqui tudo vive em `skills/<nome>/` (igual às skills Nuxt). Para projetos que esperam `.cursor/skills/<nome>/`, pode criar symlinks, por exemplo:
+
+```bash
+mkdir -p .cursor/skills
+ln -sfn "../../skills/amplify-nuxt-ssr-plugins" .cursor/skills/amplify-nuxt-ssr-plugins
+ln -sfn "../../skills/amplify-nuxt-nitro-server" .cursor/skills/amplify-nuxt-nitro-server
+```
+
+(Execute na raiz do **repositório da aplicação** Nuxt, não necessariamente neste repositório de skills.)
 
