@@ -1,6 +1,7 @@
 ---
 name: nuxt-5-data-fetching
-description: Padrões para fetching em Nuxt 5: useAsyncData/useFetch, chaves estáveis, cache, dedupe, transform/pick e SSR (com atenção a mudanças de infra do Nuxt 5).
+description: "Padrões para fetching em Nuxt 5: useAsyncData/useFetch, chaves estáveis, cache, dedupe, transform/pick e SSR (com atenção a mudanças de infra do Nuxt 5)."
+license: UNLICENSED
 ---
 
 # Nuxt 5 Data Fetching
@@ -15,4 +16,3 @@ description: Padrões para fetching em Nuxt 5: useAsyncData/useFetch, chaves est
 ## Reference
 
 Leia `reference.md`.
-

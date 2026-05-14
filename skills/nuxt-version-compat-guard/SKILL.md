@@ -1,6 +1,7 @@
 ---
 name: nuxt-version-compat-guard
-description: Evita implementar em Nuxt 3/4 coisas já descontinuadas em Nuxt 4/5. Use ao criar/refatorar features para manter retrocompatibilidade e reduzir custo de migração.
+description: "Evita implementar em Nuxt 3/4 coisas já descontinuadas em Nuxt 4/5. Use ao criar/refatorar features para manter retrocompatibilidade e reduzir custo de migração."
+license: UNLICENSED
 ---
 
 # Nuxt Version Compatibility Guard (3 → 4 → 5)
@@ -49,4 +50,3 @@ Quando estiver desenvolvendo em Nuxt 3 ou 4, esta skill força escolhas que **n�
 ## Reference
 
 Leia `reference.md` para os snippets e checklists “copiar e colar”.
-

@@ -1,6 +1,7 @@
 ---
 name: nuxt-4-uploads
-description: Uploads seguros em Nuxt 4: limites, validação, armazenamento (S3/R2), URLs assinadas, scanning e prevenção de abuso.
+description: "Uploads seguros em Nuxt 4: limites, validação, armazenamento (S3/R2), URLs assinadas, scanning e prevenção de abuso."
+license: UNLICENSED
 ---
 
 # Nuxt 4 Uploads
@@ -15,4 +16,3 @@ description: Uploads seguros em Nuxt 4: limites, validação, armazenamento (S3/
 ## Reference
 
 Leia `reference.md`.
-

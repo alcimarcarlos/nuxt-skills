@@ -1,6 +1,7 @@
 ---
 name: nuxt-4-performance-rendering
-description: Performance e rendering em Nuxt 4: routeRules, caching, payload minimization, lazy-loading, hydration, imagens e orçamento de JS.
+description: "Performance e rendering em Nuxt 4: routeRules, caching, payload minimization, lazy-loading, hydration, imagens e orçamento de JS."
+license: UNLICENSED
 ---
 
 # Nuxt 4 Performance & Rendering
@@ -21,4 +22,3 @@ description: Performance e rendering em Nuxt 4: routeRules, caching, payload min
 ## Reference
 
 Leia `reference.md`.
-

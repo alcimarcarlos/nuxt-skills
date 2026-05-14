@@ -1,6 +1,7 @@
 ---
 name: nuxt-5-core
-description: Padrões essenciais de arquitetura e DX para Nuxt 5 (Nitro v3, Vite 6 env API): runtimeConfig, rotas, composables, server/api e práticas de migração.
+description: "Padrões essenciais de arquitetura e DX para Nuxt 5 (Nitro v3, Vite 6 env API): runtimeConfig, rotas, composables, server/api e práticas de migração."
+license: UNLICENSED
 ---
 
 # Nuxt 5 Core
@@ -30,4 +31,3 @@ description: Padrões essenciais de arquitetura e DX para Nuxt 5 (Nitro v3, Vite
 ## Reference
 
 Leia `reference.md` para checklists e exemplos.
-

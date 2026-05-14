@@ -1,6 +1,7 @@
 ---
 name: nuxt-4-testing-quality
-description: Qualidade em Nuxt 4: estratégia de testes (unit/integration/e2e), contract tests de server/api e gates de CI (lint/typecheck/build).
+description: "Qualidade em Nuxt 4: estratégia de testes (unit/integration/e2e), contract tests de server/api e gates de CI (lint/typecheck/build)."
+license: UNLICENSED
 ---
 
 # Nuxt 4 Testing & Quality
@@ -14,4 +15,3 @@ description: Qualidade em Nuxt 4: estratégia de testes (unit/integration/e2e), 
 ## Reference
 
 Leia `reference.md`.
-

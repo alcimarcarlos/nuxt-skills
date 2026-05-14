@@ -1,6 +1,7 @@
 ---
 name: nuxt-5-auth-session
-description: Padrões de autenticação e sessão em Nuxt 5 (Nitro v3): cookies HttpOnly, middleware, refresh/rotacionamento, CSRF/origin checks e proteção de rotas (com nota de imports explícitos do H3).
+description: "Padrões de autenticação e sessão em Nuxt 5 (Nitro v3): cookies HttpOnly, middleware, refresh/rotacionamento, CSRF/origin checks e proteção de rotas (com nota de imports explícitos do H3)."
+license: UNLICENSED
 ---
 
 # Nuxt 5 Auth & Session
@@ -22,4 +23,3 @@ description: Padrões de autenticação e sessão em Nuxt 5 (Nitro v3): cookies 
 ## Reference
 
 Leia `reference.md` para exemplos copiar-e-colar.
-

@@ -1,6 +1,7 @@
 ---
 name: nuxt-3-auth-session
-description: Padrões de autenticação e sessão em Nuxt 3: cookies HttpOnly, middleware, refresh/rotacionamento, CSRF/origin checks e proteção de rotas.
+description: "Padrões de autenticação e sessão em Nuxt 3: cookies HttpOnly, middleware, refresh/rotacionamento, CSRF/origin checks e proteção de rotas."
+license: UNLICENSED
 ---
 
 # Nuxt 3 Auth & Session
@@ -28,4 +29,3 @@ description: Padrões de autenticação e sessão em Nuxt 3: cookies HttpOnly, m
 ## Reference
 
 Leia `reference.md` para exemplos copiar-e-colar.
-

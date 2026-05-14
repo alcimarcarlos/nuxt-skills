@@ -1,6 +1,7 @@
 ---
 name: nuxt-4-accessibility
-description: Acessibilidade em Nuxt 4 (a11y): semântica, foco, teclado, ARIA, contrastes, formulários, modais e validação contínua.
+description: "Acessibilidade em Nuxt 4 (a11y): semântica, foco, teclado, ARIA, contrastes, formulários, modais e validação contínua."
+license: UNLICENSED
 ---
 
 # Nuxt 4 Accessibility (a11y)
@@ -15,4 +16,3 @@ description: Acessibilidade em Nuxt 4 (a11y): semântica, foco, teclado, ARIA, c
 ## Reference
 
 Leia `reference.md`.
-

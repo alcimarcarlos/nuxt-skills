@@ -1,6 +1,7 @@
 ---
 name: nuxt-secret-scanning
-description: Prever/prevenir/corrigir vazamento de segredos em apps Nuxt: remoção de tokens do repo, padrões runtimeConfig, gitleaks/trufflehog, pre-commit e gates de CI.
+description: "Prever/prevenir/corrigir vazamento de segredos em apps Nuxt: remoção de tokens do repo, padrões runtimeConfig, gitleaks/trufflehog, pre-commit e gates de CI."
+license: UNLICENSED
 ---
 
 # Nuxt Secret Scanning & Hygiene
@@ -28,4 +29,3 @@ description: Prever/prevenir/corrigir vazamento de segredos em apps Nuxt: remoç
 ## Reference
 
 Leia `reference.md` para comandos e templates.
-

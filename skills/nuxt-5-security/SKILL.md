@@ -1,6 +1,7 @@
 ---
 name: nuxt-5-security
-description: Hardening OWASP para Nuxt 5 (Nitro v3): headers/CSP, cookies, SSR isolation, validação, rate limit, CORS, proteção de segredos e imports explícitos de H3 quando necessário.
+description: "Hardening OWASP para Nuxt 5 (Nitro v3): headers/CSP, cookies, SSR isolation, validação, rate limit, CORS, proteção de segredos e imports explícitos de H3 quando necessário."
+license: UNLICENSED
 ---
 
 # Nuxt 5 Security
@@ -30,4 +31,3 @@ description: Hardening OWASP para Nuxt 5 (Nitro v3): headers/CSP, cookies, SSR i
 ## Reference
 
 Leia `reference.md`.
-

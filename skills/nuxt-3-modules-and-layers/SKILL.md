@@ -1,6 +1,7 @@
 ---
 name: nuxt-3-modules-and-layers
-description: Produtividade e escala em Nuxt 3: layers, modules, auto-imports, organização de features, compartilhamento de código e governança de dependências.
+description: "Produtividade e escala em Nuxt 3: layers, modules, auto-imports, organização de features, compartilhamento de código e governança de dependências."
+license: UNLICENSED
 ---
 
 # Nuxt 3 Modules & Layers
@@ -23,4 +24,3 @@ description: Produtividade e escala em Nuxt 3: layers, modules, auto-imports, or
 
 - “God layer” com tudo dentro.
 - Module que injeta comportamento crítico sem documentação e sem opt-out.
-

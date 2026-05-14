@@ -1,6 +1,7 @@
 ---
 name: nuxt-5-performance-rendering
-description: Performance e rendering em Nuxt 5: routeRules, caching, payload minimization, lazy-loading, hydration e orçamento de JS (considerando mudanças do Nitro v3).
+description: "Performance e rendering em Nuxt 5: routeRules, caching, payload minimization, lazy-loading, hydration e orçamento de JS (considerando mudanças do Nitro v3)."
+license: UNLICENSED
 ---
 
 # Nuxt 5 Performance & Rendering
@@ -20,4 +21,3 @@ description: Performance e rendering em Nuxt 5: routeRules, caching, payload min
 ## Reference
 
 Leia `reference.md`.
-

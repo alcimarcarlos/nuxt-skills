@@ -1,0 +1,18 @@
+---
+description: Use Nuxt Skills portable skills
+globs:
+  - "skills/**"
+  - "docs/**"
+  - "AGENTS.md"
+  - "CLAUDE.md"
+  - ".github/copilot-instructions.md"
+alwaysApply: true
+---
+
+# Nuxt Skills
+
+Use `skills/<skill-name>/SKILL.md` as the canonical skill instruction file.
+
+Follow `AGENTS.md` first, then the smallest matching skill. Use `nuxt-version-compat-guard` as the baseline when a task crosses multiple topics.
+
+Do not duplicate skill bodies into Cursor rules. `.cursor/skills/<skill-name>` should remain an alias to `skills/<skill-name>`.

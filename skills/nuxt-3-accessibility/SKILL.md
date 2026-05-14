@@ -1,6 +1,7 @@
 ---
 name: nuxt-3-accessibility
-description: Acessibilidade em Nuxt 3 (a11y): semântica, foco, teclado, ARIA, contrastes, formulários, modais e validação contínua.
+description: "Acessibilidade em Nuxt 3 (a11y): semântica, foco, teclado, ARIA, contrastes, formulários, modais e validação contínua."
+license: UNLICENSED
 ---
 
 # Nuxt 3 Accessibility (a11y)
@@ -29,4 +30,3 @@ description: Acessibilidade em Nuxt 3 (a11y): semântica, foco, teclado, ARIA, c
 ## Reference
 
 Leia `reference.md` para checklists copiáveis.
-

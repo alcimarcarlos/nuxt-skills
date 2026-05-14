@@ -1,6 +1,7 @@
 ---
 name: nuxt-3-testing-quality
-description: Qualidade em Nuxt 3: estratégia de testes (unit/integration/e2e), contract tests de server/api, gates de CI (lint/typecheck/build) e prevenção de regressões.
+description: "Qualidade em Nuxt 3: estratégia de testes (unit/integration/e2e), contract tests de server/api, gates de CI (lint/typecheck/build) e prevenção de regressões."
+license: UNLICENSED
 ---
 
 # Nuxt 3 Testing & Quality
@@ -27,4 +28,3 @@ description: Qualidade em Nuxt 3: estratégia de testes (unit/integration/e2e), 
 ## Reference
 
 Leia `reference.md`.
-

@@ -1,6 +1,7 @@
 ---
 name: nuxt-3-core
-description: Padrões essenciais de arquitetura e DX para Nuxt 3 (Nuxt app, runtimeConfig, rotas, composables, componentes, camadas), com foco em previsibilidade e manutenção.
+description: "Padrões essenciais de arquitetura e DX para Nuxt 3 (Nuxt app, runtimeConfig, rotas, composables, componentes, camadas), com foco em previsibilidade e manutenção."
+license: UNLICENSED
 ---
 
 # Nuxt 3 Core
@@ -30,4 +31,3 @@ description: Padrões essenciais de arquitetura e DX para Nuxt 3 (Nuxt app, runt
 ## Reference
 
 Leia `reference.md` para checklists e exemplos.
-

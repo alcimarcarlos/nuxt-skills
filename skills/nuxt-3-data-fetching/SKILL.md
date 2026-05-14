@@ -1,6 +1,7 @@
 ---
 name: nuxt-3-data-fetching
-description: Padrões para fetching em Nuxt 3/4/5: useAsyncData/useFetch, chaves estáveis, cache, dedupe, transform/pick, erros e compatibilidade SSR.
+description: "Padrões para fetching em Nuxt 3/4/5: useAsyncData/useFetch, chaves estáveis, cache, dedupe, transform/pick, erros e compatibilidade SSR."
+license: UNLICENSED
 ---
 
 # Nuxt Data Fetching (Nuxt 3/4/5)
@@ -30,4 +31,3 @@ description: Padrões para fetching em Nuxt 3/4/5: useAsyncData/useFetch, chaves
 ## Reference
 
 Leia `reference.md`.
-

@@ -1,6 +1,7 @@
 ---
 name: nuxt-3-observability
-description: Observabilidade em Nuxt 3: logging seguro, correlação, métricas de server/api, captura de erros SSR/client e hygiene de PII.
+description: "Observabilidade em Nuxt 3: logging seguro, correlação, métricas de server/api, captura de erros SSR/client e hygiene de PII."
+license: UNLICENSED
 ---
 
 # Nuxt 3 Observability
@@ -23,4 +24,3 @@ description: Observabilidade em Nuxt 3: logging seguro, correlação, métricas 
 
 - “Log everything” (custo + risco de PII).
 - Sem correlação: impossível debugar incidentes.
-

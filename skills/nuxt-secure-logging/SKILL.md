@@ -1,6 +1,7 @@
 ---
 name: nuxt-secure-logging
-description: Prever/prevenir/corrigir riscos de logging em Nuxt 3/4: remover logs ruidosos, evitar PII/tokens, correlation id, erros públicos seguros e observabilidade mínima.
+description: "Prever/prevenir/corrigir riscos de logging em Nuxt 3/4: remover logs ruidosos, evitar PII/tokens, correlation id, erros públicos seguros e observabilidade mínima."
+license: UNLICENSED
 ---
 
 # Nuxt Secure Logging
@@ -27,4 +28,3 @@ description: Prever/prevenir/corrigir riscos de logging em Nuxt 3/4: remover log
 ## Reference
 
 Leia `reference.md`.
-

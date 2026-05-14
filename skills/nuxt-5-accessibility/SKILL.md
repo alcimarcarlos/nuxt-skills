@@ -1,6 +1,7 @@
 ---
 name: nuxt-5-accessibility
-description: Acessibilidade em Nuxt 5 (a11y): semântica, foco, teclado, ARIA, contrastes, formulários e modais (inclui cuidados SSR do Nuxt 5).
+description: "Acessibilidade em Nuxt 5 (a11y): semântica, foco, teclado, ARIA, contrastes, formulários e modais (inclui cuidados SSR do Nuxt 5)."
+license: UNLICENSED
 ---
 
 # Nuxt 5 Accessibility (a11y)
@@ -15,4 +16,3 @@ description: Acessibilidade em Nuxt 5 (a11y): semântica, foco, teclado, ARIA, c
 ## Reference
 
 Leia `reference.md`.
-

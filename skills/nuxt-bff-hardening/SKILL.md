@@ -1,6 +1,7 @@
 ---
 name: nuxt-bff-hardening
-description: Prever/prevenir/corrigir riscos de BFF em Nuxt 3/4: remover proxy catch-all, aplicar allowlist, validação, timeouts, limites, rate limit, CORS e erros públicos seguros.
+description: "Prever/prevenir/corrigir riscos de BFF em Nuxt 3/4: remover proxy catch-all, aplicar allowlist, validação, timeouts, limites, rate limit, CORS e erros públicos seguros."
+license: UNLICENSED
 ---
 
 # Nuxt BFF Hardening
@@ -38,4 +39,3 @@ Eliminar padrões perigosos (ex: `server/api/[...path].ts` com bearer token) e s
 ## Reference
 
 Leia `reference.md` para templates copiáveis.
-

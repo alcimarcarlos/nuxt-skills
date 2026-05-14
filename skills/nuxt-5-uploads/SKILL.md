@@ -1,6 +1,7 @@
 ---
 name: nuxt-5-uploads
-description: Uploads seguros em Nuxt 5 (Nitro v3): limites, validação, URLs assinadas, scanning e prevenção de abuso.
+description: "Uploads seguros em Nuxt 5 (Nitro v3): limites, validação, URLs assinadas, scanning e prevenção de abuso."
+license: UNLICENSED
 ---
 
 # Nuxt 5 Uploads
@@ -14,4 +15,3 @@ description: Uploads seguros em Nuxt 5 (Nitro v3): limites, validação, URLs as
 ## Reference
 
 Leia `reference.md`.
-

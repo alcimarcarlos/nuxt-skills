@@ -1,6 +1,7 @@
 ---
 name: nuxt-5-i18n
-description: Internacionalização em Nuxt 5: estratégia de rotas/locales, fallback, formatação, SEO multi-língua e checklists de tradução.
+description: "Internacionalização em Nuxt 5: estratégia de rotas/locales, fallback, formatação, SEO multi-língua e checklists de tradução."
+license: UNLICENSED
 ---
 
 # Nuxt 5 i18n
@@ -15,4 +16,3 @@ description: Internacionalização em Nuxt 5: estratégia de rotas/locales, fall
 ## Reference
 
 Leia `reference.md`.
-

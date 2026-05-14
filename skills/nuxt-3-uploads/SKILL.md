@@ -1,6 +1,7 @@
 ---
 name: nuxt-3-uploads
-description: Uploads seguros em Nuxt 3: limites, validação, armazenamento (S3/R2), URLs assinadas, scanning e prevenção de abuso.
+description: "Uploads seguros em Nuxt 3: limites, validação, armazenamento (S3/R2), URLs assinadas, scanning e prevenção de abuso."
+license: UNLICENSED
 ---
 
 # Nuxt 3 Uploads
@@ -28,4 +29,3 @@ description: Uploads seguros em Nuxt 3: limites, validação, armazenamento (S3/
 ## Reference
 
 Leia `reference.md` para exemplos copiar-e-colar.
-

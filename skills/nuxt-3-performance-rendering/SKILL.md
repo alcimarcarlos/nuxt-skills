@@ -1,6 +1,7 @@
 ---
 name: nuxt-3-performance-rendering
-description: Performance e rendering em Nuxt 3/4/5: routeRules, caching, payload minimization, lazy-loading, hydration, imagens e orçamento de JS.
+description: "Performance e rendering em Nuxt 3/4/5: routeRules, caching, payload minimization, lazy-loading, hydration, imagens e orçamento de JS."
+license: UNLICENSED
 ---
 
 # Nuxt Performance & Rendering (Nuxt 3/4/5)
@@ -28,4 +29,3 @@ description: Performance e rendering em Nuxt 3/4/5: routeRules, caching, payload
 ## Reference
 
 Leia `reference.md` para checklist e padrões.
-

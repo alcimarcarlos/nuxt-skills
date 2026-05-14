@@ -1,6 +1,7 @@
 ---
 name: nuxt-3-server-api-nitro
-description: Boas práticas para `server/api` (Nitro/H3) em Nuxt 3/4/5: contratos, validação, errors, cookies, proxy seguro, caching e integração com serviços externos (compatível com Nitro v3 do Nuxt 5).
+description: "Boas práticas para `server/api` (Nitro/H3) em Nuxt 3/4/5: contratos, validação, errors, cookies, proxy seguro, caching e integração com serviços externos (compatível com Nitro v3 do Nuxt 5)."
+license: UNLICENSED
 ---
 
 # Nuxt Server API (Nitro)
@@ -30,4 +31,3 @@ description: Boas práticas para `server/api` (Nitro/H3) em Nuxt 3/4/5: contrato
 ## Reference
 
 Leia `reference.md` para checklist e padrões.
-

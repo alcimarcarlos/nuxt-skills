@@ -1,6 +1,7 @@
 ---
 name: nuxt-5-testing-quality
-description: Qualidade em Nuxt 5: estratégia de testes (unit/contract/e2e), gates de CI e prevenção de regressões com foco em mudanças de infra do Nuxt 5.
+description: "Qualidade em Nuxt 5: estratégia de testes (unit/contract/e2e), gates de CI e prevenção de regressões com foco em mudanças de infra do Nuxt 5."
+license: UNLICENSED
 ---
 
 # Nuxt 5 Testing & Quality
@@ -14,4 +15,3 @@ description: Qualidade em Nuxt 5: estratégia de testes (unit/contract/e2e), gat
 ## Reference
 
 Leia `reference.md`.
-

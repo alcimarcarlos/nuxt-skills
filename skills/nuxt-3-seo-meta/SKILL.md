@@ -1,6 +1,7 @@
 ---
 name: nuxt-3-seo-meta
-description: SEO e metadados em Nuxt 3: useHead/useSeoMeta, SSR/SSG, canonical, robots, sitemap, open graph, i18n e performance de indexação.
+description: "SEO e metadados em Nuxt 3: useHead/useSeoMeta, SSR/SSG, canonical, robots, sitemap, open graph, i18n e performance de indexação."
+license: UNLICENSED
 ---
 
 # Nuxt 3 SEO & Meta
@@ -23,4 +24,3 @@ description: SEO e metadados em Nuxt 3: useHead/useSeoMeta, SSR/SSG, canonical, 
 
 - Metas definidas apenas no client (impacta crawler).
 - Conteúdo principal dependente de fetch apenas client-side em rota indexável.
-

@@ -1,6 +1,7 @@
 ---
 name: nuxt-3-i18n
-description: Internacionalização em Nuxt 3: estratégia de rotas/locales, fallback, formatação, SEO multi-língua e checklists de tradução.
+description: "Internacionalização em Nuxt 3: estratégia de rotas/locales, fallback, formatação, SEO multi-língua e checklists de tradução."
+license: UNLICENSED
 ---
 
 # Nuxt 3 i18n
@@ -27,4 +28,3 @@ description: Internacionalização em Nuxt 3: estratégia de rotas/locales, fall
 ## Reference
 
 Leia `reference.md` para checklists copiáveis.
-
