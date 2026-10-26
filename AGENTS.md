@@ -24,11 +24,12 @@ Use este arquivo como orientação operacional para Cursor, Codex, Claude Code e
 ## Ordem de Decisão
 
 1. Identifique o domínio real da tarefa e as dependências já presentes no projeto alvo.
-2. Escolha a skill principal mais específica.
-3. Use `nuxt-version-compat-guard` como baseline quando houver múltiplas áreas.
-4. Adicione skills complementares só quando houver risco real de segurança, dados, UX, performance ou testes.
-5. Antes de editar, leia arquivos vizinhos e padrões existentes.
-6. Ao finalizar, reporte validações executadas e pendências.
+2. Adote `nuxt-code-generation-contract` para padronizar estrutura de arquivos, tipos, estados SSR e testes.
+3. Escolha a skill principal mais específica.
+4. Use `nuxt-version-compat-guard` como baseline quando houver migrações ou cruzamento de versões.
+5. Adicione skills complementares só quando houver risco real de segurança, dados, UX, performance ou testes.
+6. Antes de editar, leia arquivos vizinhos e padrões existentes.
+7. Ao finalizar, reporte validações executadas e pendências.
 
 ## Qualidade Mínima
 
