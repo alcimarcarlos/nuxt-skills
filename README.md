@@ -67,6 +67,7 @@ Este pacote não é uma aplicação final. Ele é uma coleção portátil de ins
 | `nuxt-security` | OWASP security hardening for Nuxt 3/4/5: HTTP security headers, CSP, secure cookie flags, SSR cross-request state leak isolation, input validation, rate limiting, and CORS. |
 | `nuxt-seo-meta` | Search Engine Optimization (SEO) and metadata in Nuxt 3/4/5: useHead, useSeoMeta, SSR/SSG rendering, canonical URLs, robots.txt, sitemaps, Open Graph tags, and indexing performance. |
 | `nuxt-server-api-nitro` | Best practices for server/api routes in Nitro (H3) for Nuxt 3/4/5: typed contracts, request validation, secure error responses, cookie handling, BFF proxying, and external service caching. |
+| `nuxt-systematic-debugging` | Systematic root-cause debugging protocol for Nuxt (3/4/5) and Nitro: prohibits guessing, enforces minimal failing Vitest test reproducers, single-variable fixes, and non-regression verification. |
 | `nuxt-testing-quality` | Testing and quality assurance in Nuxt 3/4/5: test pyramid strategy (unit, component, and E2E), server/api contract tests with @nuxt/test-utils and Vitest, and CI quality gates. |
 | `nuxt-uploads` | Secure file upload handling in Nuxt: file size/MIME limits, validation, cloud storage (S3/R2), presigned upload URLs, virus/malware scanning, and abuse prevention. |
 | `nuxt-version-compat-guard` | Guards against deprecated APIs and features across Nuxt 3, 4, and 5: ensures future compatibility, smooth migration paths, and prevents tech debt. |
