@@ -1,6 +1,6 @@
 ---
 name: nuxt-security
-description: "Hardening OWASP para Nuxt (3/4/5)/4/5 (SSR/SSG/híbrido): headers/CSP, cookies, SSR isolation, validação, rate limit, CORS e proteção de segredos (inclui notas para Nuxt 5/Nitro v3)."
+description: "OWASP security hardening for Nuxt 3/4/5: HTTP security headers, CSP, secure cookie flags, SSR cross-request state leak isolation, input validation, rate limiting, and CORS."
 license: UNLICENSED
 ---
 

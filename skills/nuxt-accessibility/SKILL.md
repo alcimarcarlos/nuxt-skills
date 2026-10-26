@@ -1,6 +1,6 @@
 ---
 name: nuxt-accessibility
-description: "Acessibilidade em Nuxt (3/4/5) (a11y): semântica, foco, teclado, ARIA, contrastes, formulários, modais e validação contínua."
+description: "Ensures web accessibility (a11y) in Nuxt 3/4/5 and Vue: semantic HTML, focus management, keyboard navigation, ARIA attributes, color contrast, accessible forms, modals, and continuous automated auditing."
 license: UNLICENSED
 ---
 

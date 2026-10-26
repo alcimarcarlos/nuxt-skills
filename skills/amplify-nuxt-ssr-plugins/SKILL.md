@@ -1,6 +1,6 @@
 ---
 name: amplify-nuxt-ssr-plugins
-description: "Configura plugins Nuxt (.client/.server) para AWS Amplify Gen 2 com SSR: Amplify.configure(amplify_outputs), generateClient tipado, runWithAmplifyServerContext, cookies Cognito via useCookie e provide em useNuxtApp. Usar ao criar ou corrigir integração Amplify em Nuxt 3/4, erros \"Library not configured\", Data/Auth em useAsyncData, performance de cliente/SSR, superfície de auth/cookies, ou antes de tocar em server/api sem utilitário Nitro."
+description: "Configures Nuxt plugins (.client/.server) for AWS Amplify Gen 2 with SSR: Amplify.configure(amplify_outputs), typed generateClient, runWithAmplifyServerContext, Cognito cookies via useCookie, and provide in useNuxtApp. Use for universal rendering and data fetching."
 license: UNLICENSED
 disable-model-invocation: true
 ---

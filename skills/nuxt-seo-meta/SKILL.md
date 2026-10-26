@@ -1,6 +1,6 @@
 ---
 name: nuxt-seo-meta
-description: "SEO e metadados em Nuxt (3/4/5): useHead/useSeoMeta, SSR/SSG, canonical, robots, sitemap, open graph, i18n e performance de indexação."
+description: "Search Engine Optimization (SEO) and metadata in Nuxt 3/4/5: useHead, useSeoMeta, SSR/SSG rendering, canonical URLs, robots.txt, sitemaps, Open Graph tags, and indexing performance."
 license: UNLICENSED
 ---
 

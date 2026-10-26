@@ -1,6 +1,6 @@
 ---
 name: nuxt-auth-session
-description: "Padrões de autenticação e sessão em Nuxt (3/4/5): cookies HttpOnly, middleware, refresh/rotacionamento, CSRF/origin checks e proteção de rotas."
+description: "Implements authentication and session management in Nuxt 3/4/5: HttpOnly cookies, route middleware guards, refresh/rotation flows, CSRF and origin validation, and SSR session isolation."
 license: UNLICENSED
 ---
 

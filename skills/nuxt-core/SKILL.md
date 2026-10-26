@@ -1,6 +1,6 @@
 ---
 name: nuxt-core
-description: "Padrões essenciais de arquitetura e DX para Nuxt (3/4/5) (Nuxt app, runtimeConfig, rotas, composables, componentes, camadas), com foco em previsibilidade e manutenção."
+description: "Core architectural patterns and DX for Nuxt 3/4/5: directory conventions (app/ vs root), runtimeConfig, routes, composables, components, layers, and migration standards."
 license: UNLICENSED
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: nuxt-secure-logging
-description: "Prever/prevenir/corrigir riscos de logging em Nuxt 3/4: remover logs ruidosos, evitar PII/tokens, correlation id, erros públicos seguros e observabilidade mínima."
+description: "Secure logging practices in Nuxt: eliminates noisy logs, redacts credentials and PII, adds correlation IDs, masks internal error stacks in production, and standardizes structured output."
 license: UNLICENSED
 ---
 

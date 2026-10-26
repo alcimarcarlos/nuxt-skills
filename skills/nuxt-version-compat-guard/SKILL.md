@@ -1,6 +1,6 @@
 ---
 name: nuxt-version-compat-guard
-description: "Evita implementar em Nuxt 3/4 coisas já descontinuadas em Nuxt 4/5. Use ao criar/refatorar features para manter retrocompatibilidade e reduzir custo de migração."
+description: "Guards against deprecated APIs and features across Nuxt 3, 4, and 5: ensures future compatibility, smooth migration paths, and prevents tech debt."
 license: UNLICENSED
 ---
 

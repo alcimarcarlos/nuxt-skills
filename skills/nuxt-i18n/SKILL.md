@@ -1,6 +1,6 @@
 ---
 name: nuxt-i18n
-description: "Internacionalização em Nuxt (3/4/5): estratégia de rotas/locales, fallback, formatação, SEO multi-língua e checklists de tradução."
+description: "Internationalization in Nuxt 3/4/5 (@nuxtjs/i18n): localized routing strategies, fallback locales, formatting, multilingual SEO, and translation workflow checklists."
 license: UNLICENSED
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: nuxt-multitenant-merchants
-description: "Padrão multi-tenant por host em Nuxt 3/4: MerchantContext, separação public/private, BFF seguro, tipagem e governança de branding por tenant."
+description: "Host-based multi-tenant architecture in Nuxt: MerchantContext resolution, public/private state separation, secure Nitro BFF, tenant-scoped branding, and typed configurations."
 license: UNLICENSED
 ---
 

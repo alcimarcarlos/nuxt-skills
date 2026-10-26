@@ -1,0 +1,9 @@
+# Windsurf Rules for nuxt-skills
+
+Follow `AGENTS.md` as the primary operational guide for this repository.
+
+## Workflow
+1. Select the smallest matching skill from `skills/<skill-name>/SKILL.md`.
+2. Inspect target project conventions before introducing new patterns.
+3. Keep diffs minimal and reviewable; never delete unrelated comments, docstrings, or types.
+4. Verify changes with project-specific test and lint commands.

@@ -1,6 +1,6 @@
 ---
 name: nuxt-uploads
-description: "Uploads seguros em Nuxt (3/4/5): limites, validação, armazenamento (S3/R2), URLs assinadas, scanning e prevenção de abuso."
+description: "Secure file upload handling in Nuxt: file size/MIME limits, validation, cloud storage (S3/R2), presigned upload URLs, virus/malware scanning, and abuse prevention."
 license: UNLICENSED
 ---
 

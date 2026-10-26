@@ -46,30 +46,30 @@ Este pacote não é uma aplicação final. Ele é uma coleção portátil de ins
 
 | Skill | Quando usar |
 | --- | --- |
-| `amplify-nuxt-nitro-server` | Integra AWS Amplify Gen 2 em rotas e middleware Nitro (server/api, server/middleware) com contexto isolado por pedido: runWithAmplifyServerContext, cookies via H3Event, utilitário runAmplifyApi. Usar ao implementar server/api que chamam Auth/Data, proteger endpoints com sessão Cognito, endurecer BFF (validação, CORS, erros), otimizar middleware e queries, ou quando plugins Nuxt não aplicam ao diretório server/. |
-| `amplify-nuxt-ssr-plugins` | Configura plugins Nuxt (.client/.server) para AWS Amplify Gen 2 com SSR: Amplify.configure(amplify_outputs), generateClient tipado, runWithAmplifyServerContext, cookies Cognito via useCookie e provide em useNuxtApp. Usar ao criar ou corrigir integração Amplify em Nuxt 3/4, erros \"Library not configured\", Data/Auth em useAsyncData, performance de cliente/SSR, superfície de auth/cookies, ou antes de tocar em server/api sem utilitário Nitro. |
-| `nuxt-accessibility` | Acessibilidade em Nuxt (3/4/5) (a11y): semântica, foco, teclado, ARIA, contrastes, formulários, modais e validação contínua. |
-| `nuxt-auth-session` | Padrões de autenticação e sessão em Nuxt (3/4/5): cookies HttpOnly, middleware, refresh/rotacionamento, CSRF/origin checks e proteção de rotas. |
-| `nuxt-bff-hardening` | Prever/prevenir/corrigir riscos de BFF em Nuxt 3/4: remover proxy catch-all, aplicar allowlist, validação, timeouts, limites, rate limit, CORS e erros públicos seguros. |
-| `nuxt-ci-cd` | CI/CD para Nuxt 2/3: quality gates (lint/typecheck/test/build), scanning de deps, ambientes, secrets, preview deploy e checklist de release. |
+| `amplify-nuxt-nitro-server` | Integrates AWS Amplify Gen 2 in Nitro routes and middleware (server/api, server/middleware) with isolated request context: runWithAmplifyServerContext, cookies via H3Event, and runAmplifyApi utility. Use for server/api with Auth/Data, Cognito-protected endpoints, and BFF hardening. |
+| `amplify-nuxt-ssr-plugins` | Configures Nuxt plugins (.client/.server) for AWS Amplify Gen 2 with SSR: Amplify.configure(amplify_outputs), typed generateClient, runWithAmplifyServerContext, Cognito cookies via useCookie, and provide in useNuxtApp. Use for universal rendering and data fetching. |
+| `nuxt-accessibility` | Ensures web accessibility (a11y) in Nuxt 3/4/5 and Vue: semantic HTML, focus management, keyboard navigation, ARIA attributes, color contrast, accessible forms, modals, and continuous automated auditing. |
+| `nuxt-auth-session` | Implements authentication and session management in Nuxt 3/4/5: HttpOnly cookies, route middleware guards, refresh/rotation flows, CSRF and origin validation, and SSR session isolation. |
+| `nuxt-bff-hardening` | Hardens Nuxt Backend-For-Frontend (BFF) server routes in Nitro: removes catch-all proxies, enforces payload allowlists, validation schemas, timeouts, rate limiting, secure public error masking, and CORS controls. |
+| `nuxt-ci-cd` | Standardizes CI/CD pipelines for Nuxt: quality gates (linting, typechecking, Vitest tests, build checks), dependency scanning, environment secret governance, preview deployments, and release checklists. |
 | `nuxt-code-generation-contract` | Enforces a mandatory output contract for Nuxt (3/4/5) and Vue 3 code generation, ensuring directory structure, Nitro BFF boundaries, typed contracts, SSR state matrices, and security baselines. Trigger when implementing any Nuxt page, component, composable, or server/api endpoint. |
-| `nuxt-core` | Padrões essenciais de arquitetura e DX para Nuxt (3/4/5) (Nuxt app, runtimeConfig, rotas, composables, componentes, camadas), com foco em previsibilidade e manutenção. |
-| `nuxt-data-fetching` | Padrões para fetching em Nuxt (3/4/5)/4/5: useAsyncData/useFetch, chaves estáveis, cache, dedupe, transform/pick, erros e compatibilidade SSR. |
-| `nuxt-i18n` | Internacionalização em Nuxt (3/4/5): estratégia de rotas/locales, fallback, formatação, SEO multi-língua e checklists de tradução. |
-| `nuxt-modules-and-layers` | Produtividade e escala em Nuxt (3/4/5): layers, modules, auto-imports, organização de features, compartilhamento de código e governança de dependências. |
-| `nuxt-multitenant-merchants` | Padrão multi-tenant por host em Nuxt 3/4: MerchantContext, separação public/private, BFF seguro, tipagem e governança de branding por tenant. |
-| `nuxt-observability` | Observabilidade em Nuxt (3/4/5): logging seguro, correlação, métricas de server/api, captura de erros SSR/client e hygiene de PII. |
-| `nuxt-performance-rendering` | Performance e rendering em Nuxt (3/4/5)/4/5: routeRules, caching, payload minimization, lazy-loading, hydration, imagens e orçamento de JS. |
-| `nuxt-privacy-lgpd` | Conformidade e privacidade (LGPD) em apps Nuxt: minimização, consentimento, retenção, direitos do titular, cookies, logs, vendors e segurança operacional. |
-| `nuxt-secret-scanning` | Prever/prevenir/corrigir vazamento de segredos em apps Nuxt: remoção de tokens do repo, padrões runtimeConfig, gitleaks/trufflehog, pre-commit e gates de CI. |
-| `nuxt-secrets-and-config` | Governança de configuração e segredos em Nuxt 3/4: runtimeConfig, envs por ambiente, zero-secrets no client, secret scanning e padrões multi-tenant. |
-| `nuxt-secure-logging` | Prever/prevenir/corrigir riscos de logging em Nuxt 3/4: remover logs ruidosos, evitar PII/tokens, correlation id, erros públicos seguros e observabilidade mínima. |
-| `nuxt-security` | Hardening OWASP para Nuxt (3/4/5)/4/5 (SSR/SSG/híbrido): headers/CSP, cookies, SSR isolation, validação, rate limit, CORS e proteção de segredos (inclui notas para Nuxt 5/Nitro v3). |
-| `nuxt-seo-meta` | SEO e metadados em Nuxt (3/4/5): useHead/useSeoMeta, SSR/SSG, canonical, robots, sitemap, open graph, i18n e performance de indexação. |
-| `nuxt-server-api-nitro` | Boas práticas para `server/api` (Nitro/H3) em Nuxt (3/4/5)/4/5: contratos, validação, errors, cookies, proxy seguro, caching e integração com serviços externos (compatível com Nitro v3 do Nuxt 5). |
-| `nuxt-testing-quality` | Qualidade em Nuxt (3/4/5): estratégia de testes (unit/integration/e2e), contract tests de server/api, gates de CI (lint/typecheck/build) e prevenção de regressões. |
-| `nuxt-uploads` | Uploads seguros em Nuxt (3/4/5): limites, validação, armazenamento (S3/R2), URLs assinadas, scanning e prevenção de abuso. |
-| `nuxt-version-compat-guard` | Evita implementar em Nuxt 3/4 coisas já descontinuadas em Nuxt 4/5. Use ao criar/refatorar features para manter retrocompatibilidade e reduzir custo de migração. |
+| `nuxt-core` | Core architectural patterns and DX for Nuxt 3/4/5: directory conventions (app/ vs root), runtimeConfig, routes, composables, components, layers, and migration standards. |
+| `nuxt-data-fetching` | Data fetching patterns in Nuxt 3/4/5: useAsyncData, useFetch, stable deduplication keys, cache management, payload transforms/pick, error handling, and SSR compatibility. |
+| `nuxt-i18n` | Internationalization in Nuxt 3/4/5 (@nuxtjs/i18n): localized routing strategies, fallback locales, formatting, multilingual SEO, and translation workflow checklists. |
+| `nuxt-modules-and-layers` | Scalable project architecture in Nuxt 3/4/5: layers, custom modules, auto-imports, feature-based directory organization, shared cross-project code, and dependency governance. |
+| `nuxt-multitenant-merchants` | Host-based multi-tenant architecture in Nuxt: MerchantContext resolution, public/private state separation, secure Nitro BFF, tenant-scoped branding, and typed configurations. |
+| `nuxt-observability` | Observability and telemetry in Nuxt 3/4/5: structured logging, request correlation IDs, server/api metrics, SSR/client error capture, and PII redaction. |
+| `nuxt-performance-rendering` | Performance optimization and rendering modes in Nuxt 3/4/5: routeRules, caching headers, payload size minimization, lazy hydration, image optimization, and JavaScript bundle budgeting. |
+| `nuxt-privacy-lgpd` | Privacy, GDPR, and LGPD compliance in Nuxt: data minimization, consent management, retention policies, data subject rights, cookie banners, log hygiene, and vendor privacy audits. |
+| `nuxt-secret-scanning` | Prevents and remediates secret leakage in Nuxt: removes committed secrets, enforces runtimeConfig patterns, git pre-commit hooks, trufflehog/gitleaks scanning, and CI secret gates. |
+| `nuxt-secrets-and-config` | Governance of configuration and environment variables in Nuxt: runtimeConfig, multi-environment setups, zero-secrets in client bundles, and multi-tenant config management. |
+| `nuxt-secure-logging` | Secure logging practices in Nuxt: eliminates noisy logs, redacts credentials and PII, adds correlation IDs, masks internal error stacks in production, and standardizes structured output. |
+| `nuxt-security` | OWASP security hardening for Nuxt 3/4/5: HTTP security headers, CSP, secure cookie flags, SSR cross-request state leak isolation, input validation, rate limiting, and CORS. |
+| `nuxt-seo-meta` | Search Engine Optimization (SEO) and metadata in Nuxt 3/4/5: useHead, useSeoMeta, SSR/SSG rendering, canonical URLs, robots.txt, sitemaps, Open Graph tags, and indexing performance. |
+| `nuxt-server-api-nitro` | Best practices for server/api routes in Nitro (H3) for Nuxt 3/4/5: typed contracts, request validation, secure error responses, cookie handling, BFF proxying, and external service caching. |
+| `nuxt-testing-quality` | Testing and quality assurance in Nuxt 3/4/5: test pyramid strategy (unit, component, and E2E), server/api contract tests with @nuxt/test-utils and Vitest, and CI quality gates. |
+| `nuxt-uploads` | Secure file upload handling in Nuxt: file size/MIME limits, validation, cloud storage (S3/R2), presigned upload URLs, virus/malware scanning, and abuse prevention. |
+| `nuxt-version-compat-guard` | Guards against deprecated APIs and features across Nuxt 3, 4, and 5: ensures future compatibility, smooth migration paths, and prevents tech debt. |
 
 ## Instalação por Symlink
 

@@ -4,6 +4,7 @@ Use este arquivo como orientação operacional para Cursor, Codex, Claude Code e
 
 ## Princípios
 
+- **Minimal Diff Mandate**: Prefira diffs pontuais e contíguos sobre substituições completas de arquivos. Nunca remova ou altere comentários, docstrings ou tipos alheios à tarefa. Preserve o código existente.
 - Use a menor skill aplicável em `skills/<skill-name>/SKILL.md`.
 - Trate `skills/` como fonte canônica; `.cursor/skills/` contém apenas aliases.
 - Leia `reference.md` somente quando a skill pedir ou quando a tarefa exigir detalhe adicional.

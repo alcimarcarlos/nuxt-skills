@@ -1,6 +1,6 @@
 ---
 name: nuxt-modules-and-layers
-description: "Produtividade e escala em Nuxt (3/4/5): layers, modules, auto-imports, organização de features, compartilhamento de código e governança de dependências."
+description: "Scalable project architecture in Nuxt 3/4/5: layers, custom modules, auto-imports, feature-based directory organization, shared cross-project code, and dependency governance."
 license: UNLICENSED
 ---
 

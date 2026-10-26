@@ -1,6 +1,6 @@
 ---
 name: nuxt-testing-quality
-description: "Qualidade em Nuxt (3/4/5): estratégia de testes (unit/integration/e2e), contract tests de server/api, gates de CI (lint/typecheck/build) e prevenção de regressões."
+description: "Testing and quality assurance in Nuxt 3/4/5: test pyramid strategy (unit, component, and E2E), server/api contract tests with @nuxt/test-utils and Vitest, and CI quality gates."
 license: UNLICENSED
 ---
 

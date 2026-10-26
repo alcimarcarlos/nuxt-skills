@@ -1,0 +1,9 @@
+# Cline / Roo Code Rules for nuxt-skills
+
+Follow `AGENTS.md` as the primary operational guide.
+
+## Guidelines
+- Always refer to `skills/<skill-name>/SKILL.md` as canonical skill definitions.
+- Respect project-specific conventions and patterns first.
+- Minimal Diff Mandate: Avoid full-file rewrites; make surgical edits preserving existing comments and types.
+- Ensure validation, security, and tests are explicit in every delivery.

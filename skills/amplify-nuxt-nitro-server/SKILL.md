@@ -1,6 +1,6 @@
 ---
 name: amplify-nuxt-nitro-server
-description: "Integra AWS Amplify Gen 2 em rotas e middleware Nitro (server/api, server/middleware) com contexto isolado por pedido: runWithAmplifyServerContext, cookies via H3Event, utilitário runAmplifyApi. Usar ao implementar server/api que chamam Auth/Data, proteger endpoints com sessão Cognito, endurecer BFF (validação, CORS, erros), otimizar middleware e queries, ou quando plugins Nuxt não aplicam ao diretório server/."
+description: "Integrates AWS Amplify Gen 2 in Nitro routes and middleware (server/api, server/middleware) with isolated request context: runWithAmplifyServerContext, cookies via H3Event, and runAmplifyApi utility. Use for server/api with Auth/Data, Cognito-protected endpoints, and BFF hardening."
 license: UNLICENSED
 disable-model-invocation: true
 ---

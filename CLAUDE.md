@@ -12,6 +12,7 @@ Use `AGENTS.md` como orientação principal desta coleção.
 
 ## Regras
 
+- Prefira diffs mínimos e contíguos; preserve tipos, docstrings e comentários existentes.
 - Não edite aliases em `.cursor/skills`; edite `skills/`.
 - Mantenha respostas e mudanças verificáveis por Cursor, Codex, Claude Code e Copilot.
 - Não assuma bibliotecas opcionais sem confirmação no projeto alvo.

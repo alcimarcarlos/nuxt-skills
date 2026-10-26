@@ -1,6 +1,6 @@
 ---
 name: nuxt-data-fetching
-description: "Padrões para fetching em Nuxt (3/4/5)/4/5: useAsyncData/useFetch, chaves estáveis, cache, dedupe, transform/pick, erros e compatibilidade SSR."
+description: "Data fetching patterns in Nuxt 3/4/5: useAsyncData, useFetch, stable deduplication keys, cache management, payload transforms/pick, error handling, and SSR compatibility."
 license: UNLICENSED
 ---
 

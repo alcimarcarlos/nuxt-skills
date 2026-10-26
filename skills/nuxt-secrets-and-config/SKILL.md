@@ -1,6 +1,6 @@
 ---
 name: nuxt-secrets-and-config
-description: "Governança de configuração e segredos em Nuxt 3/4: runtimeConfig, envs por ambiente, zero-secrets no client, secret scanning e padrões multi-tenant."
+description: "Governance of configuration and environment variables in Nuxt: runtimeConfig, multi-environment setups, zero-secrets in client bundles, and multi-tenant config management."
 license: UNLICENSED
 ---
 

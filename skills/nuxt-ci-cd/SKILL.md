@@ -1,6 +1,6 @@
 ---
 name: nuxt-ci-cd
-description: "CI/CD para Nuxt 2/3: quality gates (lint/typecheck/test/build), scanning de deps, ambientes, secrets, preview deploy e checklist de release."
+description: "Standardizes CI/CD pipelines for Nuxt: quality gates (linting, typechecking, Vitest tests, build checks), dependency scanning, environment secret governance, preview deployments, and release checklists."
 license: UNLICENSED
 ---
 
