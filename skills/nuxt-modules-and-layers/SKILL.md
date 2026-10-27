@@ -1,6 +1,6 @@
 ---
 name: nuxt-modules-and-layers
-description: "Scalable project architecture in Nuxt 3/4/5: layers, custom modules, auto-imports, feature-based directory organization, shared cross-project code, and dependency governance."
+description: "Scalable architecture in Nuxt: layers, custom modules, auto-imports, multi-app code sharing. Trigger on modular projects."
 license: UNLICENSED
 ---
 

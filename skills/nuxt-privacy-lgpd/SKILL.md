@@ -1,6 +1,6 @@
 ---
 name: nuxt-privacy-lgpd
-description: "Privacy, GDPR, and LGPD compliance in Nuxt: data minimization, consent management, retention policies, data subject rights, cookie banners, log hygiene, and vendor privacy audits."
+description: "Privacy & LGPD/GDPR in Nuxt: consent management, data minimization, cookie banners, audit trails. Trigger on compliance."
 license: UNLICENSED
 ---
 

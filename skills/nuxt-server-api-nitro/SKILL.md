@@ -1,6 +1,6 @@
 ---
 name: nuxt-server-api-nitro
-description: "Best practices for server/api routes in Nitro (H3) for Nuxt 3/4/5: typed contracts, request validation, secure error responses, cookie handling, BFF proxying, and external service caching."
+description: "Nitro server/api routes in Nuxt: typed contracts, Zod validation, error handling, cookie session. Trigger on Nitro endpoints."
 license: UNLICENSED
 ---
 

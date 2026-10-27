@@ -1,6 +1,6 @@
 ---
 name: nuxt-systematic-debugging
-description: "Systematic root-cause debugging protocol for Nuxt (3/4/5) and Nitro: prohibits guessing, enforces minimal failing Vitest test reproducers, single-variable fixes, and non-regression verification."
+description: "Nuxt systematic debugging: minimal Vitest reproducers, SSR vs client isolation. Trigger when diagnosing bugs."
 license: UNLICENSED
 ---
 

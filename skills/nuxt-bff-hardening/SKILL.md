@@ -1,6 +1,6 @@
 ---
 name: nuxt-bff-hardening
-description: "Hardens Nuxt Backend-For-Frontend (BFF) server routes in Nitro: removes catch-all proxies, enforces payload allowlists, validation schemas, timeouts, rate limiting, secure public error masking, and CORS controls."
+description: "Hardens Nuxt Nitro BFF: removes catch-all proxies, input validation, rate limiting, error masking. Trigger on server/api."
 license: UNLICENSED
 ---
 

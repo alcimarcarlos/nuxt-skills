@@ -1,6 +1,6 @@
 ---
 name: nuxt-version-compat-guard
-description: "Guards against deprecated APIs and features across Nuxt 3, 4, and 5: ensures future compatibility, smooth migration paths, and prevents tech debt."
+description: "Version compatibility guard: prevents deprecated APIs across Nuxt 3, 4, and 5. Trigger on migration/upgrades."
 license: UNLICENSED
 ---
 

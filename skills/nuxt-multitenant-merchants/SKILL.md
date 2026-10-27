@@ -1,6 +1,6 @@
 ---
 name: nuxt-multitenant-merchants
-description: "Host-based multi-tenant architecture in Nuxt: MerchantContext resolution, public/private state separation, secure Nitro BFF, tenant-scoped branding, and typed configurations."
+description: "Multi-tenant architecture in Nuxt: merchant context resolution, branded styling, isolated state. Trigger on multi-tenant apps."
 license: UNLICENSED
 ---
 

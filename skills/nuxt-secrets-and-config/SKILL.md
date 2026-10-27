@@ -1,6 +1,6 @@
 ---
 name: nuxt-secrets-and-config
-description: "Governance of configuration and environment variables in Nuxt: runtimeConfig, multi-environment setups, zero-secrets in client bundles, and multi-tenant config management."
+description: "Configuration & secrets in Nuxt: private vs public runtimeConfig, zero-secrets in bundles. Trigger on env config."
 license: UNLICENSED
 ---
 

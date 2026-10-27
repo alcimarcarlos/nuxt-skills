@@ -1,6 +1,6 @@
 ---
 name: nuxt-code-generation-contract
-description: "Enforces a mandatory output contract for Nuxt (3/4/5) and Vue 3 code generation, ensuring directory structure, Nitro BFF boundaries, typed contracts, SSR state matrices, and security baselines. Trigger when implementing any Nuxt page, component, composable, or server/api endpoint."
+description: "Mandatory output contract for Nuxt: directory layout, Zod schemas, SSR state matrices, Vitest. Trigger on feature generation."
 license: UNLICENSED
 ---
 

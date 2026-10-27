@@ -1,6 +1,6 @@
 ---
 name: nuxt-secure-logging
-description: "Secure logging practices in Nuxt: eliminates noisy logs, redacts credentials and PII, adds correlation IDs, masks internal error stacks in production, and standardizes structured output."
+description: "Secure logging in Nuxt: redaction of tokens/PII, correlation IDs, masked stacktraces. Trigger on logging setup."
 license: UNLICENSED
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: nuxt-secret-scanning
-description: "Prevents and remediates secret leakage in Nuxt: removes committed secrets, enforces runtimeConfig patterns, git pre-commit hooks, trufflehog/gitleaks scanning, and CI secret gates."
+description: "Secret scanning in Nuxt: prevents leaked API keys, trufflehog/gitleaks rules, runtimeConfig audit. Trigger on secret safety."
 license: UNLICENSED
 ---
 

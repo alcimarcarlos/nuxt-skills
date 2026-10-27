@@ -1,6 +1,6 @@
 ---
 name: nuxt-testing-quality
-description: "Testing and quality assurance in Nuxt 3/4/5: test pyramid strategy (unit, component, and E2E), server/api contract tests with @nuxt/test-utils and Vitest, and CI quality gates."
+description: "Testing quality in Nuxt: Vitest, @nuxt/test-utils, Playwright E2E, CI quality gates. Trigger when writing tests."
 license: UNLICENSED
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: nuxt-performance-rendering
-description: "Performance optimization and rendering modes in Nuxt 3/4/5: routeRules, caching headers, payload size minimization, lazy hydration, image optimization, and JavaScript bundle budgeting."
+description: "Performance & rendering in Nuxt: routeRules, CDN caching, lazy hydration, payload optimization. Trigger on performance tuning."
 license: UNLICENSED
 ---
 

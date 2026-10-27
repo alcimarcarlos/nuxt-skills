@@ -1,6 +1,6 @@
 ---
 name: nuxt-observability
-description: "Observability and telemetry in Nuxt 3/4/5: structured logging, request correlation IDs, server/api metrics, SSR/client error capture, and PII redaction."
+description: "Observability in Nuxt: structured logging, correlation IDs, server/api metrics, error capture. Trigger on telemetry/monitoring."
 license: UNLICENSED
 ---
 
